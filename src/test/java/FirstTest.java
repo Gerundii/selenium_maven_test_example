@@ -16,6 +16,7 @@ public class FirstTest {
         driver.get("https://www.google.ru/");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q"))).sendKeys("Selenium Test");
         driver.findElement(By.name("btnK")).click();
+        driver.quit();
     }
 
 }
