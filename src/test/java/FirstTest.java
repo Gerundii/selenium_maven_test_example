@@ -15,6 +15,7 @@ public class FirstTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://www.google.ru/");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q"))).sendKeys("Selenium Test");
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("btnK"))));
         driver.findElement(By.name("btnK")).click();
         driver.quit();
     }
